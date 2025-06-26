@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NachoTech - Guía Completa de Hardware</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Nacho<span>Tech</span></a>
+                <div>
+                    <a href="#download" class="btn btn-outline" style="color: white; border-color: white;">Guía PDF</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 style="color:  #f97316 ;">Explorá los Componentes Esenciales de tu PC</h1>
+                <p>Descubrí todo lo que necesitás saber sobre el hardware que potencia tu computadora y cómo elegir los mejores componentes para tus necesidades.</p>
+                <a href="#components" class="btn">Explorar Componentes</a>
+                
+                <div class="speech-bubble">
+                    <p>¡Bienvenidos a NachoTech! Acá vas a encontrar toda la información que necesitás sobre hardware y software para PC.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Component Buttons -->
+    <div class="component-buttons" id="components">
+        <button class="component-btn" onclick="scrollToSection('cpu')">
+            <i class="fas fa-microchip"></i>
+            <span>Procesador</span>
+        </button>
+        <button class="component-btn" onclick="scrollToSection('gpu')">
+            <i class="fas fa-gamepad"></i>
+            <span>Tarjeta Gráfica</span>
+        </button>
+        <button class="component-btn" onclick="scrollToSection('ram')">
+            <i class="fas fa-memory"></i>
+            <span>Memoria RAM</span>
+        </button>
+        <button class="component-btn" onclick="scrollToSection('motherboard')">
+            <i class="fas fa-project-diagram"></i>
+            <span>Placa Madre</span>
+        </button>
+        <button class="component-btn" onclick="scrollToSection('storage')">
+            <i class="fas fa-hdd"></i>
+            <span>Almacenamiento</span>
+        </button>
+        <button class="component-btn" onclick="scrollToSection('case')">
+            <i class="fas fa-desktop"></i>
+            <span>Gabinete</span>
+        </button>
+        <button class="component-btn" onclick="scrollToSection('psu')">
+            <i class="fas fa-plug"></i>
+            <span>Fuente de Poder</span>
+        </button>
+        <button class="component-btn" onclick="scrollToSection('os')">
+            <i class="fas fa-laptop-code"></i>
+            <span>Sistemas Operativos</span>
+        </button>
+    </div>
+
+    <!-- CPU Section -->
+    <section class="component-section" id="cpu">
+        <div class="parallax-bg" style="background-image: url('cpu.jpg');"></div>
+        <div class="component-content">
+            <h2>Procesador (CPU)</h2>
+            <p>El cerebro de tu computadora, responsable de ejecutar instrucciones y procesar datos. Determina en gran medida el rendimiento general del sistema.</p>
+            <button class="btn" onclick="openModal('cpu-modal')">Más Información</button>
+        </div>
+    </section>
+
+    <!-- GPU Section -->
+    <section class="component-section" id="gpu">
+        <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+        <div class="component-content">
+            <h2>Tarjeta Gráfica (GPU)</h2>
+            <p>Componente especializado en el procesamiento de gráficos, esencial para gaming, diseño gráfico y aplicaciones de renderizado.</p>
+            <button class="btn" onclick="openModal('gpu-modal')">Más Información</button>
+        </div>
+    </section>
+
+    <!-- RAM Section -->
+    <section class="component-section" id="ram">
+        <div class="parallax-bg" style="background-image: url('ram.jpg');"></div>
+        <div class="component-content">
+            <h2>Memoria RAM</h2>
+            <p>Memoria de acceso aleatorio que almacena temporalmente los datos que el CPU necesita acceder rápidamente, afectando directamente la multitarea y el rendimiento.</p>
+            <button class="btn" onclick="openModal('ram-modal')">Más Información</button>
+        </div>
+    </section>
+
+    <!-- Motherboard Section -->
+    <section class="component-section" id="motherboard">
+        <div class="parallax-bg" style="background-image: url('mother.jpg');"></div>
+        <div class="component-content">
+            <h2>Placa Madre</h2>
+            <p>La base que conecta todos los componentes de tu PC, determinando qué hardware es compatible y cómo interactúan los diferentes elementos del sistema.</p>
+            <button class="btn" onclick="openModal('motherboard-modal')">Más Información</button>
+        </div>
+    </section>
+
+    <!-- Storage Section -->
+    <section class="component-section" id="storage">
+        <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+        <div class="component-content">
+            <h2>Almacenamiento</h2>
+            <p>Dispositivos como HDD, SSD y NVMe que almacenan tu sistema operativo, aplicaciones y archivos permanentemente.</p>
+            <button class="btn" onclick="openModal('storage-modal')">Más Información</button>
+        </div>
+    </section>
+
+    <!-- Case Section -->
+    <section class="component-section" id="case">
+        <div class="parallax-bg" style="background-image: url('gabinete.jpg');"></div>
+        <div class="component-content">
+            <h2>Gabinete</h2>
+            <p>La estructura que alberga y protege todos los componentes de tu PC, influyendo en el flujo de aire, la expansión y la estética del sistema.</p>
+            <button class="btn" onclick="openModal('case-modal')">Más Información</button>
+        </div>
+    </section>
+
+    <!-- PSU Section -->
+    <section class="component-section" id="psu">
+        <div class="parallax-bg" style="background-image: url('psu.jpg');"></div>
+        <div class="component-content">
+            <h2>Fuente de Poder (PSU)</h2>
+            <p>Convierte la energía de la pared en voltajes utilizables por los componentes de tu PC, siendo crucial para la estabilidad y longevidad del sistema.</p>
+            <button class="btn" onclick="openModal('psu-modal')">Más Información</button>
+        </div>
+    </section>
+
+    <!-- OS Section -->
+    <section class="component-section" id="os">
+        <div class="parallax-bg" style="background-image: url('mac_linux_windows_banner.png');"></div>
+        <div class="component-content">
+            <h2>Sistemas Operativos</h2>
+            <p>El software fundamental que gestiona los recursos del hardware y proporciona servicios para los programas de computadora.</p>
+            <button class="btn" onclick="openModal('os-modal')">Más Información</button>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="container">
+            <h2>Descarga Nuestra Guía Completa</h2>
+            <p>Obtén nuestro PDF detallado con especificaciones técnicas, consejos de compra y comparativas entre los principales componentes del mercado.</p>
+            <a href="https://tuserver.com/guia-componentes-pc.pdf" class="btn btn-download" download>
+                <i class="fas fa-download"></i> Descargar Guía PDF
+            </a>
+        </div>
+    </section>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>© 2025 NachoTech. Todos los derechos reservados.</p>
+            <p>Información técnica precisa.</p>
+        </div>
+    </footer>
+
+    <!-- CPU Modal -->
+    <div class="modal" id="cpu-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('cpu-modal')">&times;</span>
+            <div class="modal-header">
+                <h2>Procesador (CPU)</h2>
+            </div>
+            <div class="modal-body">
+                <img src="cpu.jpg" alt="CPU" class="modal-img">
+                <p>El CPU (Unidad Central de Procesamiento) es el componente principal de una computadora que realiza las instrucciones de un programa informático mediante la realización de operaciones aritméticas, lógicas, de control y de entrada/salida.</p>
+                <h3>Características clave:</h3>
+                <ul>
+                    <li><strong>Núcleos:</strong> Determinan cuántas tareas puede manejar simultáneamente</li>
+                    <li><strong>Hilos:</strong> Permiten mejor multitarea mediante tecnología como Hyper-Threading</li>
+                    <li><strong>Frecuencia:</strong> Velocidad de reloj medida en GHz</li>
+                    <li><strong>Cache:</strong> Memoria ultrarrápida integrada en el CPU</li>
+                    <li><strong>Socket:</strong> Tipo de conexión con la placa madre</li>
+                </ul>
+                <p>Marcas principales: Intel (Core i3/i5/i7/i9) y AMD (Ryzen 3/5/7/9)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- GPU Modal -->
+    <div class="modal" id="gpu-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('gpu-modal')">&times;</span>
+            <div class="modal-header">
+                <h2>Tarjeta Gráfica (GPU)</h2>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="GPU" class="modal-img">
+                <p>La GPU (Unidad de Procesamiento Gráfico) es un procesador especializado diseñado para acelerar la creación de imágenes en un búfer de fotogramas destinado a la salida a un dispositivo de visualización.</p>
+                <h3>Características clave:</h3>
+                <ul>
+                    <li><strong>VRAM:</strong> Memoria dedicada para almacenar texturas y datos gráficos</li>
+                    <li><strong>Ancho de banda:</strong> Velocidad de transferencia de datos de la memoria</li>
+                    <li><strong>CUDA Cores/Stream Processors:</strong> Unidades de procesamiento paralelo</li>
+                    <li><strong>Clock Speed:</strong> Velocidad de operación del chip gráfico</li>
+                    <li><strong>TDP:</strong> Consumo energético y requisitos de refrigeración</li>
+                </ul>
+                <p>Marcas principales: NVIDIA (GeForce RTX) y AMD (Radeon RX)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- RAM Modal -->
+    <div class="modal" id="ram-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('ram-modal')">&times;</span>
+            <div class="modal-header">
+                <h2>Memoria RAM</h2>
+            </div>
+            <div class="modal-body">
+                <img src="ram.jpg" alt="RAM" class="modal-img">
+                <p>La RAM (Memoria de Acceso Aleatorio) es una forma de almacenamiento de datos de computadora que almacena datos y código de máquina que se están utilizando actualmente.</p>
+                <h3>Características clave:</h3>
+                <ul>
+                    <li><strong>Capacidad:</strong> Cantidad total de memoria (8GB, 16GB, 32GB, etc.)</li>
+                    <li><strong>Tipo:</strong> DDR3, DDR4, DDR5 (cada generación mejora velocidad y eficiencia)</li>
+                    <li><strong>Velocidad:</strong> Medida en MHz, afecta el ancho de banda</li>
+                    <li><strong>Latencia (CL):</strong> Tiempo de respuesta, menor es mejor</li>
+                    <li><strong>Canales:</strong> Configuración dual/triple/quad channel mejora rendimiento</li>
+                </ul>
+                <p>Marcas principales: Corsair, G.Skill, Kingston, Crucial, Team Group</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Motherboard Modal -->
+    <div class="modal" id="motherboard-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('motherboard-modal')">&times;</span>
+            <div class="modal-header">
+                <h2>Placa Madre</h2>
+            </div>
+            <div class="modal-body">
+                <img src="mother.jpg" alt="Motherboard" class="modal-img">
+                <p>La placa base es la tarjeta de circuito impreso principal que contiene los conectores para el CPU, RAM, tarjetas de expansión y proporciona conectividad para todos los demás componentes del sistema.</p>
+                <h3>Características clave:</h3>
+                <ul>
+                    <li><strong>Factor de forma:</strong> ATX, Micro-ATX, Mini-ITX (determina tamaño y características)</li>
+                    <li><strong>Socket:</strong> Tipo de conexión para el CPU (debe coincidir con el procesador)</li>
+                    <li><strong>Chipset:</strong> Determina características soportadas y overclocking</li>
+                    <li><strong>Ranuras RAM:</strong> Cantidad y tipo de memoria soportada</li>
+                    <li><strong>Conectividad:</strong> USB, SATA, M.2, PCIe, audio, red, etc.</li>
+                    <li><strong>VRM:</strong> Sistema de alimentación para el CPU</li>
+                </ul>
+                <p>Marcas principales: ASUS, MSI, Gigabyte, ASRock, Biostar</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Storage Modal -->
+    <div class="modal" id="storage-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('storage-modal')">&times;</span>
+            <div class="modal-header">
+                <h2>Almacenamiento</h2>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Storage" class="modal-img">
+                <p>Los dispositivos de almacenamiento guardan permanentemente el sistema operativo, aplicaciones y archivos personales, incluso cuando la computadora está apagada.</p>
+                <h3>Tipos principales:</h3>
+                <ul>
+                    <li><strong>HDD (Disco Duro):</strong> Almacenamiento mecánico, mayor capacidad, menor velocidad</li>
+                    <li><strong>SSD SATA:</strong> Estado sólido, sin partes móviles, 4-5x más rápido que HDD</li>
+                    <li><strong>NVMe M.2:</strong> Ultra rápido (hasta 7GB/s), conectado directamente al PCIe</li>
+                </ul>
+                <h3>Consideraciones:</h3>
+                <ul>
+                    <li><strong>Capacidad:</strong> Desde 256GB hasta múltiples TB</li>
+                    <li><strong>Velocidad:</strong> Lectura/escritura secuencial y aleatoria</li>
+                    <li><strong>Durabilidad:</strong> TBW (Terabytes escritos) para SSDs</li>
+                    <li><strong>Factor de forma:</strong> 2.5", M.2, U.2</li>
+                </ul>
+                <p>Marcas principales: Samsung, Western Digital, Seagate, Crucial, Kingston</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Modal -->
+    <div class="modal" id="case-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('case-modal')">&times;</span>
+            <div class="modal-header">
+                <h2>Gabinete</h2>
+            </div>
+            <div class="modal-body">
+                <img src="gabinete.jpg" alt="Gabinete" class="modal-img">
+                <p>El gabinete es la estructura que alberga y protege todos los componentes internos de tu computadora, influyendo en la refrigeración, expansión y estética del sistema.</p>
+                <h3>Características clave:</h3>
+                <ul>
+                    <li><strong>Factor de forma:</strong> ATX, Micro-ATX, Mini-ITX (debe coincidir con la placa madre)</li>
+                    <li><strong>Espacio para refrigeración:</strong> Ventiladores, radiadores para refrigeración líquida</li>
+                    <li><strong>Administración de cables:</strong> Espacio detrás de la placa madre, pasacables</li>
+                    <li><strong>Bahías de expansión:</strong> Para discos duros, unidades ópticas, etc.</li>
+                    <li><strong>Ventilación:</strong> Flujo de aire optimizado para mejor refrigeración</li>
+                    <li><strong>Vidrio templado:</strong> Para mostrar los componentes internos</li>
+                </ul>
+                <h3>Consideraciones:</h3>
+                <ul>
+                    <li><strong>Tamaño:</strong> Asegúrate que quepa tu GPU y refrigeración</li>
+                    <li><strong>Refrigeración:</strong> Espacio para ventiladores o radiadores</li>
+                    <li><strong>Filtros antipolvo:</strong> Mantienen limpios los componentes</li>
+                    <li><strong>Conectores frontales:</strong> USB, audio, controles de ventilador</li>
+                </ul>
+                <p>Marcas principales: NZXT, Corsair, Lian Li, Cooler Master, Fractal Design</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PSU Modal -->
+    <div class="modal" id="psu-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('psu-modal')">&times;</span>
+            <div class="modal-header">
+                <h2>Fuente de Poder (PSU)</h2>
+            </div>
+            <div class="modal-body">
+                <img src="psu.jpg" alt="PSU" class="modal-img">
+                <p>La fuente de alimentación convierte la corriente alterna (AC) de la pared en corriente continua (DC) que los componentes de la computadora pueden usar, proporcionando voltajes estables y limpios.</p>
+                <h3>Características clave:</h3>
+                <ul>
+                    <li><strong>Potencia:</strong> Medida en Watts (500W, 750W, 1000W, etc.)</li>
+                    <li><strong>Eficiencia:</strong> Certificación 80 Plus (White, Bronze, Silver, Gold, Platinum, Titanium)</li>
+                    <li><strong>Modularidad:</strong> Totalmente, semi o no modular (para gestión de cables)</li>
+                    <li><strong>Conectores:</strong> CPU, PCIe, SATA, Molex para alimentar todos los componentes</li>
+                    <li><strong>Protecciones:</strong> OVP, UVP, OCP, SCP, OTP para seguridad</li>
+                </ul>
+                <h3>Consideraciones:</h3>
+                <ul>
+                    <li>Calidad de los componentes internos (capacitores japoneses son mejores)</li>
+                    <li>Ventilación y ruido (fan size, modo cero RPM)</li>
+                    <li>Garantía (las buenas fuentes ofrecen 7-10 años)</li>
+                </ul>
+                <p>Marcas principales: Seasonic, Corsair, EVGA, be quiet!, Thermaltake</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- OS Modal -->
+    <div class="modal" id="os-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('os-modal')">&times;</span>
+            <div class="modal-header">
+                <h2>Sistemas Operativos</h2>
+            </div>
+            <div class="modal-body">
+                <img src="mac_linux_windows_banner.png" alt="Sistemas Operativos" class="modal-img">
+                <p>El sistema operativo es el software más importante que se ejecuta en una computadora, gestiona los recursos del hardware y proporciona servicios para los programas de computadora.</p>
+                
+                <div class="os-comparison">
+                    <div class="os-item">
+                        <h3><i class="fab fa-windows" style="color: #0078d7;"></i> Windows</h3>
+                        <ul>
+                            <li><strong>Desarrollador:</strong> Microsoft</li>
+                            <li><strong>Última versión:</strong> Windows 11</li>
+                            <li><strong>Ventajas:</strong> Mayor compatibilidad de software y juegos, interfaz amigable</li>
+                            <li><strong>Desventajas:</strong> Menor privacidad, susceptible a malware</li>
+                            <li><strong>Uso ideal:</strong> Usuarios generales, gaming, oficina</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="os-item">
+                        <h3><i class="fab fa-apple" style="color: #000;"></i> macOS</h3>
+                        <ul>
+                            <li><strong>Desarrollador:</strong> Apple</li>
+                            <li><strong>Última versión:</strong> macOS Ventura</li>
+                            <li><strong>Ventajas:</strong> Excelente optimización, diseño pulido, buena seguridad</li>
+                            <li><strong>Desventajas:</strong> Limitado a hardware Apple, menos personalizable</li>
+                            <li><strong>Uso ideal:</strong> Diseño gráfico, desarrollo, productividad</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="os-item">
+                        <h3><i class="fab fa-linux" style="color: #fcc624;"></i> Linux</h3>
+                        <ul>
+                            <li><strong>Distribuciones populares:</strong> Ubuntu, Fedora, Debian, Arch</li>
+                            <li><strong>Última versión:</strong> Varía por distribución</li>
+                            <li><strong>Ventajas:</strong> Open-source, altamente personalizable, muy seguro</li>
+                            <li><strong>Desventajas:</strong> Curva de aprendizaje, menos soporte para algunos softwares</li>
+                            <li><strong>Uso ideal:</strong> Servidores, desarrollo, usuarios avanzados</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
