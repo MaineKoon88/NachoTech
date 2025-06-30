@@ -155,7 +155,7 @@ nav {
 
 /* Component Sections */
 .component-section {
-    padding: 6rem 0;
+    padding: 9rem 0;
     position: relative;
     overflow: hidden;
 }
@@ -425,6 +425,598 @@ footer p {
 .social-links a:hover {
     color: var(--accent);
 }
+
+/* Estilos para el modal de periféricos */
+.peripherals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+}
+
+.peripheral-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    min-height: 120px;
+}
+
+.peripheral-option:hover {
+    background-color: #f1f5f9;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-color: var(--primary);
+}
+
+.peripheral-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.peripheral-option:hover .peripheral-icon {
+    background-color: var(--secondary);
+    transform: scale(1.1);
+}
+
+.peripheral-option h3 {
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.peripheral-option:hover h3 {
+    color: var(--primary);
+}
+
+/* Modal header específico para periféricos */
+#peripherals-modal .modal-header {
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 1.5rem;
+}
+
+#peripherals-modal .modal-header h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+#peripherals-modal .modal-content {
+    padding: 2rem;
+}
+
+/* Sección Evolución */
+.evolution-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.evolution-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+.evolution-card {
+    position: relative;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Asegura que la imagen de fondo cubra toda la card */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Overlay inicialmente transparente */
+.evolution-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Invisible al inicio */
+    transition: background 0.5s ease;
+    z-index: 1;
+}
+
+/* Overlay oscuro al hacer hover */
+.evolution-card:hover::before {
+    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+}
+
+.evolution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+/* Contenido (inicialmente oculto) */
+.card-content {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    z-index: 2; /* Encima del overlay */
+    transition: bottom 0.5s ease;
+}
+
+
+/* Revela el contenido al hover */
+.evolution-card:hover .card-content {
+    bottom: 0;
+}
+
+
+
+.card-content .h3noventas {
+    font-family: 'Press Start 2P', cursive; /* Usa una fuente pixelada (importala de Google Fonts) */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color:  #9609e1 ; /* Color neon */
+    text-shadow: 0 0 5px  #bc4bf9 , 0 0 10px  #bc4bf9 , 0 0 20px  #bc4bf9 ;
+}
+
+.card-content .h3dosmil {
+    font-family: 'Press Start 2P', cursive; /* Usa una fuente pixelada (importala de Google Fonts) */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color:  #0ff ; /* Color neon */
+    text-shadow: 0 0 5px  #0ff , 0 0 10px  #0ff , 0 0 20px  #0ff ;
+}
+.card-content .h3dosmildiez {
+    font-family: 'Press Start 2P', cursive; /* Usa una fuente pixelada (importala de Google Fonts) */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color:  #10b981 ; /* Color neon */
+    text-shadow: 0 0 5px  #38daa4 , 0 0 10px  #38daa4 , 0 0 20px  #38daa4 ;
+}
+
+.card-content .h3dosmilveinte {
+    font-family: 'Press Start 2P', cursive; /* Usa una fuente pixelada (importala de Google Fonts) */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color:  #ef4444 ; /* Color neon */
+    text-shadow: 0 0 5px  #ec6c6c , 0 0 10px  #ec6c6c  , 0 0 20px  #ec6c6c  ;
+}
+
+
+
+.card-content p {
+    font-family: 'Courier New', monospace;
+    color: #fff;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+
+.card-icon {
+    font-size: 2.5rem;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff;
+}
+
+/* Asegúrate de que la imagen sea visible siempre */
+.card-overlay {
+    display: none; /* Lo eliminamos para simplificar */
+}
+
+/* Estilos específicos por década */
+.card-90s {
+    background: url('90s.webp') center/cover;
+}
+
+.card-2000s {
+    background: url('2000s.webp') center/cover;
+}
+
+.card-2010s {
+    background: url('2010s.webp') center/cover;
+}
+
+.card-2020s {
+    background: url('2020s.jpg') center/cover;
+}
+
+/* Modales de época */
+.modal-image {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.era-90s {
+    background: url('https://images.unsplash.com/photo-1542397284385-6010376c5337?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80') center/cover;
+}
+
+.era-2000s {
+    background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover;
+}
+
+.era-2010s {
+    background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover;
+}
+
+.era-2020s {
+    background: url('https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.specs-column h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.specs-column ul {
+    list-style-type: none;
+}
+
+.specs-column li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.specs-column li:before {
+    content: "•";
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+}
+
+/* Botones por época */
+.era-btn-90s {
+    background-color: #8b5cf6;
+}
+
+.era-btn-2000s {
+    background-color: #3b82f6;
+}
+
+.era-btn-2010s {
+    background-color: #10b981;
+}
+
+.era-btn-2020s {
+    background-color: #ef4444;
+}
+
+.era-btn-90s:hover {
+    background-color: #7c3aed;
+}
+
+.era-btn-2000s:hover {
+    background-color: #2563eb;
+}
+
+.era-btn-2010s:hover {
+    background-color: #059669;
+}
+
+.era-btn-2020s:hover {
+    background-color: #dc2626;
+}
+
+/* Estilos generales para páginas de época */
+.hero-era {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.hero-era h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero-era p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.era-section {
+    padding: 3rem 0;
+}
+
+.era-section h2 {
+    color: var(--dark);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+}
+
+/* Grid de hardware */
+.hardware-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.hardware-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.hardware-card:hover {
+    transform: translateY(-5px);
+}
+
+.hardware-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.hardware-card h3 {
+    padding: 1rem 1rem 0;
+    color: var(--dark);
+}
+
+.hardware-card p {
+    padding: 0 1rem;
+    color: var(--gray);
+}
+
+.hardware-card ul {
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+.hardware-card li {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+/* Grid de juegos */
+.games-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.game-card {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.game-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.game-info {
+    padding: 1rem 1rem 1rem 0;
+}
+
+.game-genre {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.game-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.game-specs h4 {
+    font-size: 1rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.game-specs ul {
+    font-size: 0.85rem;
+}
+
+/* Timeline */
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.timeline-item {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.timeline-item h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.timeline-item ul {
+    list-style-type: none;
+}
+
+.timeline-item li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.timeline-item li:before {
+    content: "•";
+    color: white;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* Temas por época */
+.era-theme {
+    padding: 3rem 0;
+    margin: 3rem 0;
+}
+
+/* Colores específicos por década */
+/* 90s */
+.era-90s-theme {
+    background-color: #8b5cf6;
+}
+/* 2000s */
+.era-2000s-theme {
+    background-color: #3b82f6;
+}
+/* 2010s */
+.era-2010s-theme {
+    background-color: #10b981;
+}
+/* 2020s */
+.era-2020s-theme {
+    background-color: #ef4444;
+}
+
+/* Estilos para logos de marcas y juegos */
+.hardware-info .brand-logo {
+    height: auto;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.game-logo {
+    max-height: 40px;
+    max-width: 80%;
+    margin-bottom: 10px;
+}
+
+.hardware-info {
+    padding: 1rem;
+}
+
+/* Ajustes para hardware cards */
+.hardware-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Mejoras en la timeline */
+.timeline-item ul {
+    padding-left: 0;
+}
+
+.timeline-item li {
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-item li img {
+    margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .game-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-card img {
+        height: 200px;
+        width: 100%;
+    }
+    
+    .game-specs {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive */
 @media (max-width: 992px) {

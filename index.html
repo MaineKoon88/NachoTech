@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NachoTech - Guía Completa de Hardware</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -64,6 +65,10 @@
         <button class="component-btn" onclick="scrollToSection('psu')">
             <i class="fas fa-plug"></i>
             <span>Fuente de Poder</span>
+        </button>
+        <button class="component-btn" onclick="scrollToSection('peripherals')">
+            <i class="fas fa-keyboard"></i>
+            <span>Periféricos</span>
         </button>
         <button class="component-btn" onclick="scrollToSection('os')">
             <i class="fas fa-laptop-code"></i>
@@ -141,6 +146,16 @@
         </div>
     </section>
 
+    <!-- Sección de Periféricos -->
+    <section class="component-section" id="peripherals">
+        <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+        <div class="component-content">
+            <h2>Periféricos</h2>
+            <p>Dispositivos externos que complementan tu experiencia con la computadora.</p>
+            <button class="btn" onclick="openModal('peripherals-modal')">Ver Periféricos</button>
+        </div>
+    </section>
+
     <!-- OS Section -->
     <section class="component-section" id="os">
         <div class="parallax-bg" style="background-image: url('mac_linux_windows_banner.png');"></div>
@@ -150,6 +165,64 @@
             <button class="btn" onclick="openModal('os-modal')">Más Información</button>
         </div>
     </section>
+
+    <!-- Sección Evolución de Computadoras -->
+<section class="evolution-section" id="evolution">
+    <div class="container">
+        <h2 class="section-title">Evolución de las Computadoras</h2>
+        <p class="section-subtitle">Un viaje a través de las décadas tecnológicas</p>
+        
+        <div class="evolution-cards">
+            <!-- Años 90 -->
+            <div class="evolution-card card-90s" onclick="openModal('modal-90s')">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <h3 class="h3noventas">Los Años 90</h3>
+                    <p>La era del DOS y los primeros Windows</p>
+                    <div class="card-icon">
+                        <i class="fas fa-floppy-disk"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Años 2000 -->
+            <div class="evolution-card card-2000s" onclick="openModal('modal-2000s')">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <h3 class="h3dosmil">Los Años 2000</h3>
+                    <p>Windows XP y el auge de Internet</p>
+                    <div class="card-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Años 2010 -->
+            <div class="evolution-card card-2010s" onclick="openModal('modal-2010s')">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <h3 class="h3dosmildiez">Los Años 2010</h3>
+                    <p>Multinúcleos y gráficos avanzados</p>
+                    <div class="card-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Años 2020 -->
+            <div class="evolution-card card-2020s" onclick="openModal('modal-2020s')">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <h3 class="h3dosmilveinte">Los Años 2020</h3>
+                    <p>4K, Ray Tracing y AI</p>
+                    <div class="card-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Download Section -->
     <section class="download-section" id="download">
@@ -362,6 +435,170 @@
         </div>
     </div>
 
+    <!-- Modal de Periféricos -->
+    <div class="modal" id="peripherals-modal">
+        <div class="modal-content" style="max-width: 600px;">
+            <span class="close-modal" onclick="closeModal('peripherals-modal')">&times;</span>
+            <div class="modal-header">
+                <h2>Selecciona un Periférico</h2>
+            </div>
+            <div class="modal-body">
+                <div class="peripherals-grid">
+                    <div class="peripheral-option" onclick="openModal('mouse-modal'); closeModal('peripherals-modal')">
+                        <div class="peripheral-icon">
+                            <i class="fas fa-mouse"></i>
+                        </div>
+                        <h3>Mouse</h3>
+                    </div>
+                    
+                    <div class="peripheral-option" onclick="openModal('keyboard-modal'); closeModal('peripherals-modal')">
+                        <div class="peripheral-icon">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <h3>Teclado</h3>
+                    </div>
+                    
+                    <div class="peripheral-option" onclick="openModal('speakers-modal'); closeModal('peripherals-modal')">
+                        <div class="peripheral-icon">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                        <h3>Parlantes</h3>
+                    </div>
+                    
+                    <div class="peripheral-option" onclick="openModal('monitor-modal'); closeModal('peripherals-modal')">
+                        <div class="peripheral-icon">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <h3>Monitor</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ... (modales individuales de mouse, teclado, parlantes y monitor se mantienen igual) ... -->
+
+    <!-- Mouse Modal -->
+    <div class="modal" id="mouse-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('mouse-modal')">&times;</span>
+            <div class="modal-header">
+                <h2>Mouse</h2>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Mouse" class="modal-img">
+                <p>Dispositivo de entrada que permite interactuar con la interfaz gráfica mediante movimientos y clics.</p>
+                <h3>Tipos principales:</h3>
+                <ul>
+                    <li><strong>Óptico:</strong> Usa un LED para detectar movimiento</li>
+                    <li><strong>Láser:</strong> Mayor precisión que los ópticos</li>
+                    <li><strong>Inalámbrico:</strong> Sin cables, usa Bluetooth o receptor USB</li>
+                    <li><strong>Ergonómico:</strong> Diseñado para mayor comodidad</li>
+                    <li><strong>Gaming:</strong> Alta precisión, botones programables</li>
+                </ul>
+                <h3>Consideraciones:</h3>
+                <ul>
+                    <li><strong>DPI/CPI:</strong> Sensibilidad (puntos por pulgada)</li>
+                    <li><strong>Polling Rate:</strong> Tasa de reporte al PC (Hz)</li>
+                    <li><strong>Botones:</strong> Número y personalización</li>
+                    <li><strong>Peso:</strong> Ajustable en algunos modelos gaming</li>
+                </ul>
+                <p>Marcas principales: Logitech, Razer, SteelSeries, Corsair, Microsoft</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Keyboard Modal -->
+    <div class="modal" id="keyboard-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('keyboard-modal')">&times;</span>
+            <div class="modal-header">
+                <h2>Teclado</h2>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1465&q=80" alt="Teclado" class="modal-img">
+                <p>Dispositivo de entrada que permite introducir texto y comandos mediante la presión de teclas.</p>
+                <h3>Tipos principales:</h3>
+                <ul>
+                    <li><strong>Membrana:</strong> Silenciosos y económicos</li>
+                    <li><strong>Mecánico:</strong> Durables y precisos, con feedback táctil</li>
+                    <li><strong>Híbrido:</strong> Combinación de tecnologías</li>
+                    <li><strong>Ergonómico:</strong> Diseño dividido para mayor comodidad</li>
+                    <li><strong>Numérico:</strong> Solo teclado numérico</li>
+                </ul>
+                <h3>Consideraciones:</h3>
+                <ul>
+                    <li><strong>Switches:</strong> Tipo de interruptores (Cherry MX, Romer-G, etc.)</li>
+                    <li><strong>Layout:</strong> Distribución de teclas (QWERTY, AZERTY, etc.)</li>
+                    <li><strong>Retroiluminación:</strong> RGB o monocromática</li>
+                    <li><strong>Conectividad:</strong> USB, Bluetooth, inalámbrico</li>
+                </ul>
+                <p>Marcas principales: Logitech, Corsair, Razer, Ducky, Keychron</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Speakers Modal -->
+    <div class="modal" id="speakers-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('speakers-modal')">&times;</span>
+            <div class="modal-header">
+                <h2>Parlantes</h2>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Parlantes" class="modal-img">
+                <p>Dispositivos de salida que convierten señales eléctricas en sonido audible.</p>
+                <h3>Tipos principales:</h3>
+                <ul>
+                    <li><strong>2.0:</strong> Dos canales (estereo básico)</li>
+                    <li><strong>2.1:</strong> Dos satélites + subwoofer</li>
+                    <li><strong>5.1:</strong> Sistema surround con subwoofer</li>
+                    <li><strong>7.1:</strong> Surround avanzado</li>
+                    <li><strong>Soundbar:</strong> Barra alargada para TV/monitores</li>
+                </ul>
+                <h3>Consideraciones:</h3>
+                <ul>
+                    <li><strong>Potencia:</strong> Watts RMS (potencia real)</li>
+                    <li><strong>Respuesta de frecuencia:</strong> Rango de sonidos reproducibles</li>
+                    <li><strong>Conexión:</strong> 3.5mm, USB, Bluetooth, óptica</li>
+                    <li><strong>Características:</strong> Control de graves/agudos, RGB</li>
+                </ul>
+                <p>Marcas principales: Logitech, Creative, Bose, Edifier, Harman Kardon</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Monitor Modal -->
+    <div class="modal" id="monitor-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('monitor-modal')">&times;</span>
+            <div class="modal-header">
+                <h2>Monitor</h2>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1511&q=80" alt="Monitor" class="modal-img">
+                <p>Dispositivo de salida que muestra la información gráfica generada por la tarjeta gráfica.</p>
+                <h3>Tipos principales:</h3>
+                <ul>
+                    <li><strong>LCD:</strong> Tecnología básica de pantalla plana</li>
+                    <li><strong>LED:</strong> Retroiluminación LED, más eficiente</li>
+                    <li><strong>IPS:</strong> Mejores ángulos de visión y colores</li>
+                    <li><strong>VA:</strong> Buen balance entre IPS y TN</li>
+                    <li><strong>OLED:</strong> Contraste infinito, colores vibrantes</li>
+                </ul>
+                <h3>Consideraciones:</h3>
+                <ul>
+                    <li><strong>Resolución:</strong> Full HD, QHD, 4K, 8K</li>
+                    <li><strong>Tasa de refresco:</strong> 60Hz, 144Hz, 240Hz, etc.</li>
+                    <li><strong>Tiempo de respuesta:</strong> Importante para gaming</li>
+                    <li><strong>Conectividad:</strong> HDMI, DisplayPort, USB-C</li>
+                    <li><strong>HDR:</strong> Alto rango dinámico para mejor contraste</li>
+                </ul>
+                <p>Marcas principales: ASUS, LG, Samsung, Dell, Acer</p>
+            </div>
+        </div>
+    </div>
+
     <!-- OS Modal -->
     <div class="modal" id="os-modal">
         <div class="modal-content">
@@ -410,6 +647,191 @@
             </div>
         </div>
     </div>
+
+    <!-- Modales para cada época -->
+<!-- Modal Años 90 -->
+<div class="modal" id="modal-90s">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-90s')">&times;</span>
+        <div class="modal-header">
+            <h2>Computadoras de los Años 90</h2>
+            <p>La revolución de la computación personal</p>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image era-90s"></div>
+            
+            <h3>Contexto Histórico</h3>
+            <p>Los 90 marcaron la transición de las computadoras como herramientas de trabajo a dispositivos de entretenimiento y comunicación en el hogar.</p>
+            
+            <div class="specs-grid">
+                <div class="specs-column">
+                    <h4>Hardware Típico</h4>
+                    <ul>
+                        <li><strong>CPU:</strong> Intel 486 (33-100 MHz) → Pentium (60-200 MHz)</li>
+                        <li><strong>RAM:</strong> 4MB → 64MB</li>
+                        <li><strong>Almacenamiento:</strong> HDD 120MB → 6GB</li>
+                        <li><strong>Gráficos:</strong> VGA → SVGA (1MB VRAM)</li>
+                        <li><strong>Medios:</strong> Disquetes 3.5", CD-ROM</li>
+                    </ul>
+                </div>
+                
+                <div class="specs-column">
+                    <h4>Software Representativo</h4>
+                    <ul>
+                        <li>MS-DOS 6.22</li>
+                        <li>Windows 3.1 → Windows 95/98</li>
+                        <li>Norton Commander</li>
+                        <li>WinAMP, ICQ</li>
+                        <li>Juegos: Doom, Warcraft, Myst</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>Uso Principal</h3>
+            <p>Procesamiento de texto, primeras experiencias multimedia, juegos 2D/3D básicos, introducción a Internet.</p>
+            
+            <a href="computadoras-90s.html" class="btn era-btn-90s">Ver Juegos y Especificaciones</a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Años 2000 -->
+<div class="modal" id="modal-2000s">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-2000s')">&times;</span>
+        <div class="modal-header">
+            <h2>Computadoras de los Años 2000</h2>
+            <p>La era de Internet y los multimedios</p>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image era-2000s"></div>
+            
+            <h3>Contexto Histórico</h3>
+            <p>La década donde las computadoras se convirtieron en centros de entretenimiento digital y comunicación global.</p>
+            
+            <div class="specs-grid">
+                <div class="specs-column">
+                    <h4>Hardware Típico</h4>
+                    <ul>
+                        <li><strong>CPU:</strong> Pentium 4 (1.4-3.8 GHz)</li>
+                        <li><strong>RAM:</strong> 128MB → 2GB</li>
+                        <li><strong>Almacenamiento:</strong> HDD 20GB → 500GB</li>
+                        <li><strong>Gráficos:</strong> GeForce 256 → GeForce 8800</li>
+                        <li><strong>Medios:</strong> CD-RW, DVD±RW</li>
+                    </ul>
+                </div>
+                
+                <div class="specs-column">
+                    <h4>Software Representativo</h4>
+                    <ul>
+                        <li>Windows XP</li>
+                        <li>Mac OS X</li>
+                        <li>Adobe Photoshop 7 → CS3</li>
+                        <li>Skype, MSN Messenger</li>
+                        <li>Juegos: Half-Life 2, WoW, The Sims</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>Uso Principal</h3>
+            <p>Navegación web, edición multimedia digital, juegos 3D avanzados, redes P2P.</p>
+            
+            <a href="computadoras-2000s.html" class="btn era-btn-2000s">Ver Juegos y Especificaciones</a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Años 2010 -->
+<div class="modal" id="modal-2010s">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-2010s')">&times;</span>
+        <div class="modal-header">
+            <h2>Computadoras de los Años 2010</h2>
+            <p>La revolución móvil y los multinúcleos</p>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image era-2010s"></div>
+            
+            <h3>Contexto Histórico</h3>
+            <p>La consolidación de los smartphones impulsó la movilidad y eficiencia energética en las PCs.</p>
+            
+            <div class="specs-grid">
+                <div class="specs-column">
+                    <h4>Hardware Típico</h4>
+                    <ul>
+                        <li><strong>CPU:</strong> Intel Core i5/i7 (2-8 núcleos)</li>
+                        <li><strong>RAM:</strong> 4GB → 32GB</li>
+                        <li><strong>Almacenamiento:</strong> SSD 128GB → 1TB</li>
+                        <li><strong>Gráficos:</strong> GTX 400 → RTX 2000</li>
+                        <li><strong>Display:</strong> Full HD → 4K</li>
+                    </ul>
+                </div>
+                
+                <div class="specs-column">
+                    <h4>Software Representativo</h4>
+                    <ul>
+                        <li>Windows 7 → Windows 10</li>
+                        <li>macOS Sierra → Catalina</li>
+                        <li>Adobe Creative Cloud</li>
+                        <li>Steam, Discord</li>
+                        <li>Juegos: GTA V, The Witcher 3, Fortnite</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>Uso Principal</h3>
+            <p>Streaming, edición profesional de video/foto, realidad virtual, juegos AAA en alta definición.</p>
+            
+            <a href="computadoras-2010s.html" class="btn era-btn-2010s">Ver Juegos y Especificaciones</a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Años 2020 -->
+<div class="modal" id="modal-2020s">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-2020s')">&times;</span>
+        <div class="modal-header">
+            <h2>Computadoras de los Años 2020</h2>
+            <p>Ray Tracing, AI y computación ubicua</p>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image era-2020s"></div>
+            
+            <h3>Contexto Histórico</h3>
+            <p>La inteligencia artificial y los gráficos fotorrealistas dominan la escena tecnológica.</p>
+            
+            <div class="specs-grid">
+                <div class="specs-column">
+                    <h4>Hardware Típico</h4>
+                    <ul>
+                        <li><strong>CPU:</strong> Ryzen 5000/Intel 12th Gen (8-16 núcleos)</li>
+                        <li><strong>RAM:</strong> 16GB → 128GB</li>
+                        <li><strong>Almacenamiento:</strong> NVMe SSD 1TB → 4TB</li>
+                        <li><strong>Gráficos:</strong> RTX 3000/4000, RX 6000/7000</li>
+                        <li><strong>Display:</strong> 4K HDR → 8K, 240Hz</li>
+                    </ul>
+                </div>
+                
+                <div class="specs-column">
+                    <h4>Software Representativo</h4>
+                    <ul>
+                        <li>Windows 11</li>
+                        <li>macOS Ventura/Sonoma</li>
+                        <li>Blender, Unreal Engine 5</li>
+                        <li>ChatGPT, Copilot</li>
+                        <li>Juegos: Cyberpunk 2077, Elden Ring</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>Uso Principal</h3>
+            <p>Gaming 4K/8K, creación de contenido con IA, realidad virtual/metaverso, computación científica.</p>
+            
+            <a href="computadoras-2020s.html" class="btn era-btn-2020s">Ver Juegos y Especificaciones</a>
+        </div>
+    </div>
+</div>
 
     <script src="script.js"></script>
 </body>
